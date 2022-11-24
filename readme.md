@@ -15,7 +15,7 @@ Connect to http://localhost to see a CodeIgniter 4 welcome page.
 
 Connect to http://localhost:8080
 
-login : root
+login : root  
 password : superpass
 
 An html folder is created, and all the app files are in this folder.
