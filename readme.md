@@ -1,5 +1,7 @@
 A docker-compose to build an Apache / PHP / PhpMyAdmin / Mariadb stack
 
+### How to run it
+
 ```
 docker-compose build --no-cache
 docker-compose up
