@@ -1,10 +1,35 @@
 A docker-compose to build an Apache / PHP / PhpMyAdmin / Mariadb stack
 
-### How to run it
+### How to build, run and destroy it
 
+To build the services :
 ```
-docker-compose build --no-cache
+docker-compose build
+```
+
+To create and start the containers :
+```
 docker-compose up
+```
+
+To start them afterwards :
+```
+docker-compose start
+```
+
+To restart them :
+```
+docker-compose restart
+```
+
+To stop them :
+```
+docker-compose stop
+```
+
+To Stop and remove containers, networks :
+```
+docker-compose down
 ```
 
 ### Welcome Page
