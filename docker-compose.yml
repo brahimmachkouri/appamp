@@ -1,0 +1,70 @@
+version: "3.2"
+
+services:
+
+  php:
+    build:
+      context: './php/'
+      args:
+       PHP_VERSION: ${PHP_VERSION}
+    command: ["/bin/sh", "-c", "/startup/bootstrap-php.sh"]
+    networks:
+      - backend
+    volumes:
+      - ./html/:/var/www/html/
+    container_name: "${PHP_NAME}"
+    restart: always
+    
+  apache:
+    build:
+      context: './apache/'
+      args:
+       APACHE_VERSION: ${APACHE_VERSION}
+    depends_on:
+      - php
+      - mariadb
+    networks:
+      - backend
+      - frontend
+    #command: ["/bin/bash", "-c", "/startup/bootstrap-httpd.sh"]
+    ports:
+      - "80:80"
+    volumes:
+      - ./html/:/var/www/html/
+    container_name: "${APACHE_NAME}"
+    #tty: true
+    #stdin_open: true
+    restart: always
+
+  mariadb:
+    image: mariadb:${MARIADB_VERSION:-latest}
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    networks:
+      - backend
+    environment:
+      MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
+      MYSQL_DATABASE: "${DB_NAME}"
+      MYSQL_USER: "${DB_USERNAME}"
+      MYSQL_PASSWORD: "${DB_PASSWORD}"
+    container_name: "${MARIADB_NAME}"
+  
+  phpmyadmin:
+    depends_on:
+      - mariadb
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '8080:80'
+    networks:
+      - backend
+    container_name: "${PHPMYADMIN_NAME}"
+    env_file:
+      - .env
+    
+networks:
+  backend:
+  frontend:
