@@ -2,7 +2,7 @@ A docker-compose to build an Apache / PHP / PhpMyAdmin / Mariadb stack
 
 ### How to build & run it
 
-To build the services :
+To build the services (the first time only) :
 ```
 docker-compose build
 ```
