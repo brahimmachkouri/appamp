@@ -1,6 +1,6 @@
 A docker-compose to build an Apache / PHP / PhpMyAdmin / Mariadb stack
 
-### How to build, run and destroy it
+### How to build & run it
 
 To build the services :
 ```
@@ -12,7 +12,9 @@ To create and start the containers :
 docker-compose up
 ```
 
-To start them afterwards :
+### Some commands
+
+To start the services afterwards :
 ```
 docker-compose start
 ```
