@@ -3,7 +3,7 @@
 mkdir -p /var/www/html
 
 # Create an empty CodeIgniter project
-/usr/bin/composer create-project codeigniter4/framework /var/www/html
+/usr/bin/composer create-project codeigniter/framework /var/www/html
 
 # Since this is a dev tool, I don't care about the permissions
 # So the folder html is deletable externally
