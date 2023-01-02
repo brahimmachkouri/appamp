@@ -36,7 +36,7 @@ docker-compose down
 
 ### Welcome Page
 
-Connect to http://localhost to see a CodeIgniter 4 welcome page.
+Connect to http://localhost to see a php infos page.
 
 ### PhpMyAdmin
 
