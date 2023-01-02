@@ -45,4 +45,4 @@ Connect to http://localhost:8080
 login : root  
 password : superpass
 
-An html folder is created, and all the app files are in this folder.
+An html folder is created, and all the app files must be in this folder.
