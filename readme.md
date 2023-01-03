@@ -2,6 +2,11 @@ A docker-compose to build an Apache / PHP / PhpMyAdmin / Mariadb stack
 
 ### How to build & run it
 
+```
+git clone https://github.com/brahimmachkouri/appmapp.git mydev
+cd mydev
+```
+
 To build the services (the first time only) :
 ```
 docker-compose build
