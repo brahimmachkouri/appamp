@@ -1,6 +1,6 @@
 #!/bin/sh
 # Create the folder
-mkdir -p /var/www/html
+mkdir -p /var/www/html/public
 
 # Create an empty CodeIgniter project
 #/usr/bin/composer create-project codeigniter/framework /var/www/html
