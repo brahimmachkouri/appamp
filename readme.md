@@ -1,6 +1,6 @@
 A docker-compose to build an Apache / PHP / PhpMyAdmin / Mariadb stack
 
-*Warning : I didn't test it under Windows, so it may not be functionnal under that operating system.*
+Tested in Windows, macOS, linux Ubuntu.
 
 ### How to build & run it
 
