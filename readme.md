@@ -1,4 +1,4 @@
-A docker-compose to build an Apache / PHP / PhpMyAdmin / Mariadb stack
+A Docker LAMP (Apache / PHP / PhpMyAdmin / Mariadb)
 
 Tested in Windows, macOS, linux Ubuntu.
 
